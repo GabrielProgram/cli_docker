@@ -55,6 +55,8 @@ func Initialize() bundle.Mutator {
 				"workspace",
 				"variables",
 			),
+			// Provide permission config errors & warnings after initializing all variables
+			permissions.PermissionDiagnostics(),
 			mutator.SetRunAs(),
 			mutator.OverrideCompute(),
 			mutator.ProcessTargetMode(),
